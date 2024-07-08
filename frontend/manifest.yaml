@@ -120,6 +120,13 @@ spec:
       containers:
       - name: frontend
         image: vikram1503/frontend:v1
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "150m"
+            memory: "256Mi"
         volumeMounts:
         - name: nginx-conf
           mountPath: /etc/nginx/nginx.conf
